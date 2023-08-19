@@ -27,3 +27,16 @@ function unique(nums) {
   }
   return found;
 }
+
+// find missing number in array
+function missingNum(arr) {
+  const n = arr.length + 1;
+  const expectedSum = (n * (n + 1)) / 2;
+  let actualSum = 0;
+
+  for (let num of arr) {
+    actualSum += num;
+  }
+
+  return expectedSum - actualSum;
+}

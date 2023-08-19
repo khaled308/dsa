@@ -45,3 +45,17 @@ function fibonacciSeries(num) {
   }
   return current;
 }
+
+// armstrong number
+function armstrongNumber(num) {
+  let n = num;
+  let sum = 0;
+
+  while (n > 0) {
+    const digit = n % 10;
+    sum += Math.pow(digit, 3);
+    n = Math.floor(n / 10);
+  }
+
+  return sum === num;
+}

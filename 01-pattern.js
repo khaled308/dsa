@@ -32,3 +32,44 @@ function printDiamond(n) {
     console.log();
   }
 }
+
+function hollowSquare(n) {
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (i === 1 || i === n || j === 1 || j === n) {
+        process.stdout.write("*");
+      } else {
+        process.stdout.write(" ");
+      }
+    }
+    process.stdout.write("\n");
+  }
+}
+
+function printReverseTriangle(n) {
+  for (let i = 1; i <= n; i++) {
+    for (let s = 1; s <= n - i; s++) {
+      process.stdout.write(" ");
+    }
+
+    for (let j = 1; j <= i; j++) {
+      process.stdout.write("*");
+    }
+
+    console.log();
+  }
+}
+
+function printPyramid(n) {
+  for (let i = 1; i <= n; i++) {
+    for (let s = 1; s <= n - i; s++) {
+      process.stdout.write(" ");
+    }
+
+    for (let j = 1; j < 2 * i; j++) {
+      process.stdout.write("*");
+    }
+
+    console.log();
+  }
+}
