@@ -26,6 +26,7 @@ function matrixColSum(m) {
   return res;
 }
 
+// rotate matrix by 90
 function rotateMatrixBy90(m) {
   for (let i = 0; i < m.length; i++) {
     // transpose

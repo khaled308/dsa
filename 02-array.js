@@ -54,5 +54,14 @@ function maxSubarraySum(nums) {
   return maxSum;
 }
 
-const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
-console.log(maxSubarraySum(nums));
+// print all sub arrays
+function printAllSubArrays(nums) {
+  for (let start = 0; start < nums.length; start++) {
+    for (let end = start; end < nums.length; end++) {
+      for (let i = start; i <= end; i++) {
+        process.stdout.write(nums[i] + "");
+      }
+      console.log();
+    }
+  }
+}

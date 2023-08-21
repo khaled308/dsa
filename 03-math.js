@@ -59,3 +59,12 @@ function armstrongNumber(num) {
 
   return sum === num;
 }
+
+// all divisors
+function printAllDivisors(num) {
+  for (let i = 1; i * i <= num; i++) {
+    if (num % i == 0) {
+      console.log(i, num / i);
+    }
+  }
+}
