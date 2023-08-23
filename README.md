@@ -26,6 +26,13 @@
 * matrix column sum
 * rotate matrix by 90 degree
 
+## Stack
+* Stack implementation using array
+* reverse a string using stack
+
+## Queue
+* Queue implementation using array
+
 ## Searching
 * linear search
 * binary search
