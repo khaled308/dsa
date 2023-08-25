@@ -37,3 +37,9 @@
 * linear search
 * binary search
 * square root of a number
+
+## Bit Manipulation
+* given a number, set its i'th bit
+* given a number, clear its i'th bit
+* given a number, toggle its i'th bit
+* given a number, check if its i'th bit is set or not
