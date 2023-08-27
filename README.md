@@ -43,3 +43,10 @@
 * given a number, clear its i'th bit
 * given a number, toggle its i'th bit
 * given a number, check if its i'th bit is set or not
+* given a number, count number of set bits
+* given array of numbers, every number occurs twice except one, find that number
+
+## Sorting
+* bubble sort
+* selection sort
+* insertion sort
