@@ -13,6 +13,7 @@
 * find missing number in array
 * max sum of sub array
 * print all sub arrays
+* Remove Duplicates from Sorted Array
 
 ## Math
 * sum of digits of a number
@@ -50,3 +51,5 @@
 * bubble sort
 * selection sort
 * insertion sort
+
+## String
