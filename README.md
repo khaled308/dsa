@@ -8,12 +8,15 @@
 * print pyramid pattern
 
 ## Array
+* max element in array
+* check if array is sorted
 * count number of elements that have at least one element greater than itself
 * find unique element in array
 * find missing number in array
 * max sum of sub array
 * print all sub arrays
 * Remove Duplicates from Sorted Array
+* move all zeros to end of array
 
 ## Math
 * sum of digits of a number

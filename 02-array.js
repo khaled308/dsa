@@ -1,3 +1,22 @@
+// max element in array
+function maxEle(nums) {
+  let max = -Infinity;
+
+  for (let num of nums) {
+    if (num > max) max = num;
+  }
+
+  return max;
+}
+
+// check if array is sorted
+function isSorted(nums) {
+  for (let i = 0; i < nums.length - 1; i++) {
+    if (nums[i] > nums[i + 1]) return false;
+  }
+  return true;
+}
+
 // count number of elements that have at least one element greater than itself
 function count(nums) {
   const max = Math.max(...nums);
@@ -77,4 +96,21 @@ function removeDuplicates(nums) {
     }
   }
   nums.length = j + 1;
+}
+
+// move all zeros to end
+function moveZeros(nums) {
+  let j = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      nums[j] = nums[i];
+      j++;
+    }
+  }
+
+  for (j = j + 1; j < nums.length; j++) {
+    nums[j] = 0;
+  }
+  return nums;
 }
