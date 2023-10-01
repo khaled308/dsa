@@ -56,3 +56,9 @@
 * insertion sort
 
 ## String
+
+## Recursion
+* print numbers from n to 1
+* print numbers from 1 to n
+* power of a number
+* print binary form of a number
