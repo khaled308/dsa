@@ -62,3 +62,6 @@
 * print numbers from 1 to n
 * power of a number
 * print binary form of a number
+
+## hashing
+* find pair of elements in array whose sum is equal to given number
