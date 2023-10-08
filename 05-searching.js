@@ -43,7 +43,7 @@ function twoSum(nums, target) {
   let start = 0;
   let end = nums.length - 1;
 
-  while (start < end) {
+  while (start <= end) {
     const sum = nums[start] + nums[end];
 
     if (sum == target) return [start, end];
