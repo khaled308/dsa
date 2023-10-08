@@ -71,3 +71,4 @@
 
 ## Linked List
 * Singly Linked List implementation
+* Doubly Linked List implementation

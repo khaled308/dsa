@@ -6,6 +6,14 @@ class Node {
   }
 }
 
+class NodeDouble {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+    this.prev = null;
+  }
+}
+
 // singly linked list
 class SinglyLinkedList {
   constructor() {
@@ -115,12 +123,94 @@ class SinglyLinkedList {
   }
 }
 
-const s = new SinglyLinkedList();
-s.push(1);
-s.push(2);
-s.push(100);
-// s.insertAtHead(-1);
-console.log(s.length());
-s.display();
+// doubly linked list
+class DoublyLinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
 
-console.log(s.find(2));
+  length() {
+    let temp = this.head;
+    let count = 0;
+
+    while (temp) {
+      count++;
+      temp = temp.next;
+    }
+    return count;
+  }
+
+  display() {
+    let temp = this.head;
+
+    while (temp) {
+      console.log(temp.data);
+      temp = temp.next;
+    }
+  }
+
+  push(data) {
+    const node = new NodeDouble(data);
+
+    if (!this.head) {
+      this.head = node;
+    } else {
+      node.prev = this.tail;
+      this.tail.next = node;
+    }
+
+    this.tail = node;
+  }
+
+  pop() {
+    if (!this.head) {
+      return null;
+    } else if (!this.head.next) {
+      const data = this.head.data;
+      this.head = null;
+      this.tail = null;
+      return data;
+    }
+
+    const data = this.tail.data;
+    this.tail = this.tail.prev;
+    this.tail.next = null;
+
+    return data;
+  }
+
+  insertAtHead(data) {
+    const node = new Node(data);
+    if (this.head) this.head.prev = node;
+
+    node.next = this.head;
+    this.head = node;
+  }
+
+  deleteFromHead() {
+    if (!this.head) return null;
+
+    if (this.head.next) this.head.next.prev = null;
+
+    const data = this.head.data;
+    this.head = this.head.next;
+
+    return data;
+  }
+}
+
+const d = new DoublyLinkedList();
+d.insertAtHead(1);
+d.insertAtHead(2);
+d.insertAtHead(3);
+d.insertAtHead(4);
+d.display();
+d.deleteFromHead();
+d.deleteFromHead();
+// d.deleteFromHead();
+// d.deleteFromHead();
+// d.deleteFromHead();
+console.log(d.length());
+console.log("=============");
+d.display();
