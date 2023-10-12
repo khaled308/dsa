@@ -33,6 +33,7 @@
 ## Stack
 * Stack implementation using array
 * reverse a string using stack
+* parenthesis matching using stack
 
 ## Queue
 * Queue implementation using array
@@ -72,3 +73,4 @@
 ## Linked List
 * Singly Linked List implementation
 * Doubly Linked List implementation
+* Circular Linked List implementation

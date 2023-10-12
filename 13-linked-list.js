@@ -199,18 +199,3 @@ class DoublyLinkedList {
     return data;
   }
 }
-
-const d = new DoublyLinkedList();
-d.insertAtHead(1);
-d.insertAtHead(2);
-d.insertAtHead(3);
-d.insertAtHead(4);
-d.display();
-d.deleteFromHead();
-d.deleteFromHead();
-// d.deleteFromHead();
-// d.deleteFromHead();
-// d.deleteFromHead();
-console.log(d.length());
-console.log("=============");
-d.display();
