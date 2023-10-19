@@ -74,3 +74,11 @@
 * Singly Linked List implementation
 * Doubly Linked List implementation
 * Circular Linked List implementation
+
+## Binary Search Tree
+* insert node in BST
+* in order traversal
+* pre order traversal
+* post order traversal
+* search node in BST
+* height of BST
