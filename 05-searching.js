@@ -97,16 +97,19 @@ function searchInRotatedSorted(arr, target) {
 
     if (arr[mid] === target) return mid;
 
+    // left portion
     if (arr[start] <= arr[mid]) {
       if (arr[start] <= target && target < arr[mid]) end = mid - 1;
       else start = mid + 1;
-    } else {
+    }
+    // right portion
+    else {
       if (arr[mid] < target && target <= arr[end]) start = mid + 1;
-      else end = mid + 1;
+      else end = mid - 1;
     }
   }
   return -1;
 }
 
 // 4 5 6 7 0 1 2
-console.log(searchInRotatedSorted([4, 5, 6, 7, 0, 1, 2, 3], 3));
+console.log(searchInRotatedSorted([4, 5, 6, 7, 0, 1, 2, 3], 4));
