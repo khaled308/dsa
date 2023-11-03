@@ -46,6 +46,7 @@
 * square root of a number
 * return indices of two numbers whose sum is equal to given number
 * find first and last occurrence of a number in sorted array
+* search in rotated sorted array
 
 ## Bit Manipulation
 * given a number, set its i'th bit
