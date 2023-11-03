@@ -68,3 +68,17 @@ function printAllDivisors(num) {
     }
   }
 }
+
+// GCD
+function GCD(a, b) {
+  a = a < 0 ? -a : a;
+  b = b < 0 ? -b : b;
+
+  if (b === 0) {
+    return a;
+  }
+
+  return GCD(b, a % b);
+}
+
+console.log(GCD(0, 1));

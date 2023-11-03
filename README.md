@@ -17,6 +17,7 @@
 * print all sub arrays
 * Remove Duplicates from Sorted Array
 * move all zeros to end of array
+* find sub array with given sum
 
 ## Math
 * sum of digits of a number
@@ -24,6 +25,7 @@
 * fibonacci series
 * armstrong number (question: 153 = 1^3 + 5^3 + 3^3)
 * print all divisors of a number
+* GCD of two numbers
 
 ## Matrix
 * matrix row sum
@@ -82,3 +84,4 @@
 * post order traversal
 * search node in BST
 * height of BST
+* balanced BST

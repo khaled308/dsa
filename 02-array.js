@@ -114,3 +114,25 @@ function moveZeros(nums) {
   }
   return nums;
 }
+
+// find subarray with given sum
+function subArraySum(arr, sum) {
+  let start = 0;
+  let end = 0;
+  let currentSum = 0;
+
+  while (end < arr.length) {
+    currentSum += arr[end];
+
+    while (currentSum > sum && start <= end) {
+      currentSum -= arr[start];
+      start++;
+    }
+
+    if (currentSum === sum && start <= end) return arr.slice(start, end + 1);
+
+    end++;
+  }
+
+  return null;
+}
