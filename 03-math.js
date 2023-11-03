@@ -81,4 +81,53 @@ function GCD(a, b) {
   return GCD(b, a % b);
 }
 
-console.log(GCD(0, 1));
+// count number of digits in a number
+function countDigits(num) {
+  num = num < 0 ? -num : num;
+  let count = 0;
+
+  if (num == 0) return 1;
+
+  while (num > 0) {
+    num = Math.floor(num / 10);
+    count++;
+  }
+  return count;
+}
+
+// check if a number is prime or not
+function isPrime(num) {
+  if (num <= 1) return false;
+
+  for (let i = 2; i * i <= num; i++) {
+    if (num % i == 0) return false;
+  }
+
+  return true;
+}
+
+// check if a number is palindrome or not
+function isPalindrome(num) {
+  let n = num;
+  let reversed = 0;
+
+  while (n) {
+    reversed = 10 * reversed + (n % 10);
+    n = Math.floor(n / 10);
+  }
+
+  return reversed === num;
+}
+
+// count trailing zeros in factorial of a number
+function countZeros(num) {
+  let count = 0;
+  let temp = 5;
+
+  while (temp < num) {
+    count += Math.floor(num / temp);
+    temp *= 5;
+  }
+
+  return count;
+}

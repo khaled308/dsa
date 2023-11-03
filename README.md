@@ -26,6 +26,10 @@
 * armstrong number (question: 153 = 1^3 + 5^3 + 3^3)
 * print all divisors of a number
 * GCD of two numbers
+* count number of digits in a number
+* check if a number is prime or not
+* check if a number is palindrome or not
+* count trailing zeros in factorial of a number
 
 ## Matrix
 * matrix row sum
