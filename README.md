@@ -72,6 +72,9 @@
 * print numbers from 1 to n
 * power of a number
 * print binary form of a number
+* reverse a string
+* array sum using recursion
+* flatten array using recursion
 
 ## hashing
 * find pair of elements in array whose sum is equal to given number
