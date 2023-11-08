@@ -21,6 +21,7 @@
 * find sub array with given sum
 * rotate array by one
 * rotate array by given number
+* leaders in array (question: 16 17 4 3 5 2, answer: 17 5 2)
 
 ## Math
 * sum of digits of a number

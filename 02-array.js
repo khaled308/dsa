@@ -185,4 +185,22 @@ function rotateArray(arr, k = 1) {
   return arr;
 }
 
-console.log(rotateArray([2, 3, 4, 5, 1], 5));
+// leaders in array (question: 16 17 4 3 5 2, answer: 17 5 2)
+function getLeaders(arr) {
+  if (arr.length === 0) return [];
+
+  let maxRight = arr[arr.length - 1];
+  const res = [];
+  res.push(maxRight);
+
+  for (let i = arr.length - 2; i >= 0; i--) {
+    if (arr[i] > maxRight) {
+      res.push(arr[i]);
+      maxRight = arr[i];
+    }
+  }
+
+  return res.reverse();
+}
+
+console.log(getLeaders([16, 17, 4, 3, 5, 2]));
