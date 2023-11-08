@@ -11,7 +11,7 @@ function printNTo1(n) {
   if (n < 1) return;
 
   console.log(n);
-  print1ToN(n - 1);
+  printNTo1(n - 1);
 }
 
 // power

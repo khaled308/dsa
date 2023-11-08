@@ -9,6 +9,7 @@
 
 ## Array
 * max element in array
+* second max element in array
 * check if array is sorted
 * count number of elements that have at least one element greater than itself
 * find unique element in array
@@ -18,6 +19,8 @@
 * Remove Duplicates from Sorted Array
 * move all zeros to end of array
 * find sub array with given sum
+* rotate array by one
+* rotate array by given number
 
 ## Math
 * sum of digits of a number

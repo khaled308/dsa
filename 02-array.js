@@ -9,6 +9,25 @@ function maxEle(nums) {
   return max;
 }
 
+// second max element in array
+function seconsMax(nums) {
+  if (nums.length < 2) return null;
+
+  let max = nums[0];
+  let res = null;
+
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] > max) {
+      res = max;
+      max = nums[i];
+    } else if (nums[i] < max && (res === null || nums[i] > res)) {
+      res = nums[i];
+    }
+  }
+
+  return res;
+}
+
 // check if array is sorted
 function isSorted(nums) {
   for (let i = 0; i < nums.length - 1; i++) {
@@ -136,3 +155,34 @@ function subArraySum(arr, sum) {
 
   return null;
 }
+
+// rotate array by one
+function rotateArrayByOne(arr) {
+  const temp = arr[arr.length - 1];
+
+  for (let i = arr.length - 1; i > 0; i--) {
+    arr[i] = arr[i - 1];
+  }
+
+  arr[0] = temp;
+  return arr;
+}
+
+// rotate array by given number
+function rotateArray(arr, k = 1) {
+  k = k % arr.length;
+
+  for (let j = 0; j < k; j++) {
+    const temp = arr[arr.length - 1];
+
+    for (let i = arr.length - 1; i > 0; i--) {
+      arr[i] = arr[i - 1];
+    }
+
+    arr[0] = temp;
+  }
+
+  return arr;
+}
+
+console.log(rotateArray([2, 3, 4, 5, 1], 5));
