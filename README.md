@@ -25,6 +25,7 @@
 * maximum difference between two elements in array such that larger element appears after smaller element
 * stock buy sell to maximize profit
 * max consecutive ones in binary array
+* maximum length even odd sub array
 
 ## Math
 * sum of digits of a number

@@ -248,4 +248,22 @@ function countMaxConsecutiveOnes(arr) {
   return Math.max(max, count);
 }
 
-console.log(countMaxConsecutiveOnes([1, 0, 1, 1, 1, 1, 0, 1, 1]));
+// maximum length even odd sub array
+function maximumLength(arr) {
+  if (!arr.length) return 0;
+
+  let sum = 0;
+  let res = 1;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] % 2 === arr[i + 1] % 2) sum = 0;
+    else {
+      sum++;
+      if (i + 1 == arr.length - 1) sum++;
+      res = Math.max(res, sum);
+    }
+  }
+  return res;
+}
+
+console.log(maximumLength([10, 12, 8, 4]));
