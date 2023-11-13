@@ -23,6 +23,8 @@
 * rotate array by given number
 * leaders in array (question: 16 17 4 3 5 2, answer: 17 5 2)
 * maximum difference between two elements in array such that larger element appears after smaller element
+* stock buy sell to maximize profit
+* max consecutive ones in binary array
 
 ## Math
 * sum of digits of a number

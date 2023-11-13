@@ -218,4 +218,34 @@ function maxDifference(arr) {
   return maxDiff;
 }
 
-console.log(maxDifference([2, 3, 10, 6, 4, 8, 1]));
+// stock buy sell to maximize profit
+function stockBuyAndSell(prices) {
+  let min = prices[0];
+  let profit = prices[1] - prices[0];
+
+  for (let i = 1; i < prices.length; i++) {
+    profit = Math.max(prices[i] - min, profit);
+    min = Math.min(min, prices[i]);
+  }
+
+  return profit < 0 ? 0 : profit;
+}
+
+// max consecutive ones in binary array
+function countMaxConsecutiveOnes(arr) {
+  let max = 0;
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 0) {
+      count = 0;
+    } else {
+      count++;
+      max = Math.max(max, count);
+    }
+  }
+
+  return Math.max(max, count);
+}
+
+console.log(countMaxConsecutiveOnes([1, 0, 1, 1, 1, 1, 0, 1, 1]));
