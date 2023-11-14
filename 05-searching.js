@@ -111,5 +111,57 @@ function searchInRotatedSorted(arr, target) {
   return -1;
 }
 
-// 4 5 6 7 0 1 2
-console.log(searchInRotatedSorted([4, 5, 6, 7, 0, 1, 2, 3], 4));
+// count number of occurrences in sorted array
+function countOccurrences(arr, target) {
+  let firstOcc = -1;
+  let lastOcc = -1;
+  let start = 0;
+  let end = arr.length - 1;
+
+  while (start <= end) {
+    let mid = start + Math.floor((end - start) / 2);
+
+    if (arr[mid] === target) {
+      firstOcc = mid;
+      end = mid - 1;
+    } else if (arr[mid] > target) end = mid - 1;
+    else start = mid + 1;
+  }
+
+  start = 0;
+  end = arr.length - 1;
+  while (start <= end) {
+    let mid = start + Math.floor((end - start) / 2);
+
+    if (arr[mid] === target) {
+      lastOcc = mid;
+      start = mid + 1;
+    } else if (arr[mid] > target) end = mid - 1;
+    else start = mid + 1;
+  }
+
+  return lastOcc - firstOcc == 0 ? 0 : lastOcc - firstOcc + 1;
+}
+
+// search in infinite sorted array
+function searchInInfinteSortedArray(arr, target) {
+  let start = 0;
+  let end = 1;
+
+  while (arr[end] < target) {
+    start = end;
+    end *= 2;
+  }
+
+  while (start <= end) {
+    const mid = start + Math.floor((end - start) / 2);
+
+    if (arr[mid] === target) return mid;
+    else if (arr[mid] > target) end = mid - 1;
+    else start = mid + 1;
+  }
+
+  return -1;
+}
+
+console.log(searchInInfinteSortedArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 9));
