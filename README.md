@@ -74,6 +74,10 @@
 * bubble sort
 * selection sort
 * insertion sort
+* merge sort
+* quick sort
+* ### Problems:
+    * merge Two sorted array
 
 ## String
 

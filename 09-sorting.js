@@ -39,6 +39,53 @@ function insertionSort(arr) {
   }
 }
 
-const nums = [6, 9, 2, 3, 0, 4];
-insertionSort(nums);
-console.log(nums);
+function mergeSort(arr, l, r) {
+  if (r > l) {
+    let mid = l + Math.floor((r - l) / 2);
+    mergeSort(arr, l, mid);
+    mergeSort(arr, mid + 1, r);
+    merge(arr, l, mid, r);
+  }
+}
+
+function merge(arr, low, mid, height) {
+  const arr1 = arr.slice(low, mid + 1);
+  const arr2 = arr.slice(mid + 1, height + 1);
+  let i = 0;
+  let j = 0;
+
+  while (low <= height) {
+    if (!arr2[j] || arr1[i] <= arr2[j]) {
+      arr[low] = arr1[i];
+      i++;
+    } else if (!arr1[i] || arr1[i] > arr2[j]) {
+      arr[low] = arr2[j];
+      j++;
+    }
+
+    low++;
+  }
+}
+
+// merge Two Sorted Array
+function mergeTwoSortedArrays(arr1, arr2) {
+  const res = Array(arr1.length + arr2.length);
+
+  let k = 0;
+  let j = 0;
+  for (let i = 0; i < res.length; i++) {
+    if (!arr2[k] || arr1[j] <= arr2[k]) {
+      res[i] = arr1[j];
+      j++;
+    } else if (!arr1[j] || arr1[j] > arr2[k]) {
+      res[i] = arr2[k];
+      k++;
+    }
+  }
+
+  return res;
+}
+
+const arr = [10, 5, 30, 15, 7];
+mergeSort(arr, 0, arr.length - 1);
+console.log(arr);
