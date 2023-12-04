@@ -86,6 +86,46 @@ function mergeTwoSortedArrays(arr1, arr2) {
   return res;
 }
 
-const arr = [10, 5, 30, 15, 7];
-mergeSort(arr, 0, arr.length - 1);
-console.log(arr);
+// intersection of two sorted array
+function intersectionOfTwoSortedArray(arr1, arr2) {
+  const res = [];
+
+  let k = 0;
+  let j = 0;
+  for (let i = 0; i < arr1.length + arr2.length; i++) {
+    if (!arr2[k] || arr1[j] < arr2[k] || arr1[j] == res[res.length - 1]) {
+      j++;
+    } else if (
+      !arr1[j] ||
+      arr1[j] > arr2[k] ||
+      arr2[k] == res[res.length - 1]
+    ) {
+      k++;
+    } else if (arr2[k] && arr1[j] && arr1[j] == arr2[k]) {
+      res.push(arr1[j]);
+      j++;
+      k++;
+    }
+  }
+  return res;
+}
+
+// union of two sorted array
+function unionOfTwoSortedArrays(arr1, arr2) {
+  const res = [];
+
+  let k = 0;
+  let j = 0;
+  for (let i = 0; i < arr1.length + arr2.length; i++) {
+    if (!arr2[k] || arr1[j] <= arr2[k]) {
+      if (arr1[j] != res[res.length - 1]) res.push(arr1[j]);
+      j++;
+    } else if (!arr1[j] || arr1[j] > arr2[k]) {
+      if (arr2[k] != res[res.length - 1]) res.push(arr2[k]);
+      k++;
+    }
+  }
+  return res;
+}
+
+console.log(unionOfTwoSortedArrays([2, 3, 3, 3, 4, 4], [4, 4]));

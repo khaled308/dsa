@@ -78,6 +78,8 @@
 * quick sort
 * ### Problems:
     * merge Two sorted array
+    * intersection of two sorted array
+    * union of two sorted array
 
 ## String
 
