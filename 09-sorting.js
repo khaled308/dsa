@@ -67,6 +67,46 @@ function merge(arr, low, mid, height) {
   }
 }
 
+function quickSort(arr, l, r) {
+  if (l < r) {
+    const p = partion2(arr, l, r);
+    quickSort(arr, l, p - 1);
+    quickSort(arr, p + 1, r);
+  }
+}
+
+function partion1(arr, low, height) {
+  // take last element as pivot
+  let index = low - 1;
+  let pivot = arr[height];
+
+  while (low <= height) {
+    if (arr[low] <= pivot) {
+      index++;
+      [arr[low], arr[index]] = [arr[index], arr[low]];
+    }
+    low++;
+  }
+
+  return index;
+}
+
+function partion2(arr, low, height) {
+  // take first element as pivot
+  let index = low - 1;
+  let pivot = arr[height];
+
+  while (low <= height) {
+    if (arr[low] <= pivot) {
+      index++;
+      [arr[low], arr[index]] = [arr[index], arr[low]];
+    }
+    low++;
+  }
+
+  return index;
+}
+
 // merge Two Sorted Array
 function mergeTwoSortedArrays(arr1, arr2) {
   const res = Array(arr1.length + arr2.length);
@@ -128,4 +168,9 @@ function unionOfTwoSortedArrays(arr1, arr2) {
   return res;
 }
 
-console.log(unionOfTwoSortedArrays([2, 3, 3, 3, 4, 4], [4, 4]));
+const arr = [8, 4, 7, 9, 3, 10, 5];
+const arr2 = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+quickSort(arr, 0, arr.length - 1);
+quickSort(arr2, 0, arr2.length - 1);
+console.log(arr);
+console.log(arr2);
