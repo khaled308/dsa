@@ -94,6 +94,9 @@
 
 ## hashing
 * find pair of elements in array whose sum is equal to given number
+* Find first non-repeating character of given String
+* Remove duplicates from Array
+
 
 
 ## Linked List
