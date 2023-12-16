@@ -55,3 +55,32 @@ function flattenArray(arr) {
 
   return res;
 }
+
+// string palindrome using recursion
+function strPalindrome(str, start, end) {
+  if (!str.length || start >= end) return true;
+  if (str[start] !== str[end]) return false;
+
+  return strPalindrome(start, start + 1, end - 1);
+}
+
+// string permutation using recursion`
+function strPermutation(str) {
+  const res = [];
+
+  if (str.length == 0) return [""];
+
+  for (let i = 0; i < str.length; i++) {
+    const remainingStr = str.slice(0, i) + str.slice(i + 1);
+    const perm = strPermutation(remainingStr);
+
+    for (let j of perm) {
+      res.push(str[i] + j);
+    }
+  }
+
+  return res;
+}
+
+console.log(strPermutation("abc"));
+console.log(strPermutation("abcd"));
