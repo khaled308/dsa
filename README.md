@@ -93,6 +93,7 @@
 * flatten array using recursion
 * string palindrome using recursion
 * string permutation
+* array permutation
 
 ## hashing
 * find pair of elements in array whose sum is equal to given number

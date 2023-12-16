@@ -82,5 +82,21 @@ function strPermutation(str) {
   return res;
 }
 
-console.log(strPermutation("abc"));
-console.log(strPermutation("abcd"));
+// array permutation
+function permute(nums) {
+  const ans = [];
+
+  if (nums.length === 0) return [[]];
+
+  for (let i = 0; i < nums.length; i++) {
+    const rem = nums.slice(0, i).concat(nums.slice(i + 1));
+
+    const perm = permute(rem);
+
+    for (let el of perm) {
+      ans.push([nums[i], ...el]);
+    }
+  }
+
+  return ans;
+}
