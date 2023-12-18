@@ -100,3 +100,33 @@ function permute(nums) {
 
   return ans;
 }
+
+// Given m, n count number of ways to reach from (0, 0) to (m, n) in a matrix
+function countPaths(m, n) {
+  if (m === 1 || n === 1) return 1;
+
+  return countPaths(m - 1, n) + countPaths(m, n - 1);
+}
+
+function countPathsForLargerValues(m, n) {
+  const memo = new Map();
+
+  function helper(x, y) {
+    if (x === 1 || y === 1) {
+      return 1;
+    }
+
+    const memoKey = `${x}-${y}`;
+    if (memo.has(memoKey)) {
+      return memo.get(memoKey);
+    }
+
+    const result = helper(x - 1, y) + helper(x, y - 1);
+    memo.set(memoKey, result);
+
+    return result;
+  }
+  return helper(m, n);
+}
+
+console.log(countPathsForLargerValues(51, 9));
