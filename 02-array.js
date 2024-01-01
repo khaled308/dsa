@@ -10,7 +10,7 @@ function maxEle(nums) {
 }
 
 // second max element in array
-function seconsMax(nums) {
+function secondMax(nums) {
   if (nums.length < 2) return null;
 
   let max = nums[0];
