@@ -21,6 +21,17 @@ function power(base, exponent) {
   return base * power(base, exponent - 1);
 }
 
+function power2(base, exp) {
+  if (exp === 0) return 1;
+
+  const temp = power(base, Math.floor(exp / 2));
+  let res = temp * temp;
+
+  if (exp % 2 !== 0) res *= base;
+
+  return res;
+}
+
 // decimal to binary
 function dTB(num) {
   if (num == 0) return;

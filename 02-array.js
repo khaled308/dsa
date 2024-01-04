@@ -266,4 +266,15 @@ function maximumLength(arr) {
   return res;
 }
 
-console.log(maximumLength([10, 12, 8, 4]));
+// prefix sum array
+function prefixSum(nums) {
+  const res = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    const num = i != 0 ? nums[i] + res[i - 1] : nums[i];
+    res.push(num);
+  }
+  return res;
+}
+
+console.log(prefixSum([3, 2, 1, 5, 4]));

@@ -26,6 +26,7 @@
 * stock buy sell to maximize profit
 * max consecutive ones in binary array
 * maximum length even odd sub array
+* prefix sum array
 
 ## Math
 * sum of digits of a number
