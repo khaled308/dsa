@@ -96,6 +96,7 @@
 * string permutation
 * array permutation
 * Given m, n count number of ways to reach from (0, 0) to (m, n) in a matrix
+* letter combination of a phone number
 
 ## hashing
 * find pair of elements in array whose sum is equal to given number

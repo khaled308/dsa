@@ -144,7 +144,7 @@ function countOccurrences(arr, target) {
 }
 
 // search in infinite sorted array
-function searchInInfinteSortedArray(arr, target) {
+function searchInInfiniteSortedArray(arr, target) {
   let start = 0;
   let end = 1;
 
@@ -164,4 +164,4 @@ function searchInInfinteSortedArray(arr, target) {
   return -1;
 }
 
-console.log(searchInInfinteSortedArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 9));
+console.log(searchInInfiniteSortedArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 9));

@@ -140,4 +140,35 @@ function countPathsForLargerValues(m, n) {
   return helper(m, n);
 }
 
-console.log(countPathsForLargerValues(51, 9));
+// letter combination of a phone number
+function letterCombination(digits) {
+  const dTL = {
+    2: "abc",
+    3: "def",
+    4: "ghi",
+    5: "jkl",
+    6: "mno",
+    7: "pqrs",
+    8: "tuv",
+    9: "wxyz",
+  };
+
+  const res = [];
+  function helper(digits, str = "") {
+    if (digits.length === 0) {
+      res.push(str);
+      return;
+    }
+
+    const key = digits[0];
+    const letters = dTL[key];
+
+    for (let i = 0; i < letters.length; i++) {
+      helper(digits.slice(1), str + letters[i]);
+    }
+  }
+
+  helper(digits);
+  return res;
+}
+console.log(letterCombination("234"));
