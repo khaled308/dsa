@@ -120,3 +120,5 @@
 * balanced BST
 
 ## backtracking
+* string permutation
+* Maximum Length of a Concatenated String with Unique Characters

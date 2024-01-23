@@ -76,18 +76,15 @@ function strPalindrome(str, start, end) {
 }
 
 // string permutation using recursion`
-function strPermutation(str) {
-  const res = [];
-
-  if (str.length == 0) return [""];
+function strPermutation(str, ans = "", res = []) {
+  if (str.length == 0) {
+    res.push(ans);
+    return res;
+  }
 
   for (let i = 0; i < str.length; i++) {
-    const remainingStr = str.slice(0, i) + str.slice(i + 1);
-    const perm = strPermutation(remainingStr);
-
-    for (let j of perm) {
-      res.push(str[i] + j);
-    }
+    const subStr = str.slice(0, i) + str.slice(i + 1);
+    strPermutation(subStr, ans + str[i], res);
   }
 
   return res;
@@ -171,4 +168,4 @@ function letterCombination(digits) {
   helper(digits);
   return res;
 }
-console.log(letterCombination("234"));
+console.log(strPermutation("abc"));
