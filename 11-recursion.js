@@ -168,4 +168,25 @@ function letterCombination(digits) {
   helper(digits);
   return res;
 }
-console.log(strPermutation("abc"));
+
+// find the first index if element in array or -1 if not present
+function firstIndex(arr, ele, idx = 0) {
+  if (idx >= arr.length) return -1;
+
+  if (arr[idx] === ele) return idx;
+
+  return firstIndex(arr, ele, idx + 1);
+}
+
+// find the last index if element in array or -1 if not present
+function lastIndex(arr, ele) {
+  const helper = (idx = arr.length - 1) => {
+    if (idx < 0) return -1;
+
+    if (arr[idx] == ele) return idx;
+
+    return helper(idx - 1);
+  };
+
+  return helper();
+}

@@ -97,6 +97,8 @@
 * array permutation
 * Given m, n count number of ways to reach from (0, 0) to (m, n) in a matrix
 * letter combination of a phone number
+* find the first index if element in array or -1 if not present
+* find the last index if element in array or -1 if not present
 
 ## hashing
 * find pair of elements in array whose sum is equal to given number
