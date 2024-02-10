@@ -99,6 +99,7 @@
 * letter combination of a phone number
 * find the first index if element in array or -1 if not present
 * find the last index if element in array or -1 if not present
+* get all subsequences of a string
 
 ## hashing
 * find pair of elements in array whose sum is equal to given number

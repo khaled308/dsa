@@ -90,6 +90,24 @@ function strPermutation(str, ans = "", res = []) {
   return res;
 }
 
+function strPermutation2(str) {
+  if (str.length === 0) return [""];
+
+  const char = str[0];
+  const subStr = str.slice(1);
+  const result = [];
+  const recResult = strPermutation2(subStr);
+
+  for (let i = 0; i < recResult.length; i++) {
+    for (let j = 0; j <= recResult[i].length; j++) {
+      const temp = recResult[i].slice(0, j) + char + recResult[i].slice(j);
+      result.push(temp);
+    }
+  }
+
+  return result;
+}
+
 // array permutation
 function permute(nums) {
   const ans = [];
@@ -189,4 +207,21 @@ function lastIndex(arr, ele) {
   };
 
   return helper();
+}
+
+// get all subsequences of a string
+function allSubsequences(str) {
+  if (str.length == 0) return [""];
+
+  const char = str[0];
+  const subStr = str.slice(1);
+  const result = [];
+  const recResult = allSubsequences(subStr);
+
+  for (let i = 0; i < recResult.length; i++) {
+    result.push(recResult[i]);
+    result.push(char + recResult[i]);
+  }
+
+  return result;
 }
