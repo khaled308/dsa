@@ -100,6 +100,9 @@
 * find the first index if element in array or -1 if not present
 * find the last index if element in array or -1 if not present
 * get all subsequences of a string
+* generate parenthesis
+* [decode ways](https://leetcode.com/problems/decode-ways/description/)
+
 
 ## hashing
 * find pair of elements in array whose sum is equal to given number

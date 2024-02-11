@@ -225,3 +225,47 @@ function allSubsequences(str) {
 
   return result;
 }
+
+// generate parenthesis
+function generateParenthesis(n) {
+  const res = [];
+
+  const helper = (open = 0, closed = 0, cur = "") => {
+    if (closed == n) {
+      res.push(cur);
+      return;
+    }
+
+    if (open < n) helper(open + 1, closed, cur + "(");
+
+    if (open > closed) helper(open, closed + 1, cur + ")");
+  };
+
+  helper();
+  return res;
+}
+
+// decode ways
+function decodeWays(str) {
+  const helper = (idx = 0) => {
+    if (idx >= str.length) return 1;
+
+    let res = 0;
+
+    if (str[idx] !== "0") {
+      res += helper(idx + 1);
+    }
+
+    if (
+      idx + 1 < str.length &&
+      str[idx] !== "0" &&
+      parseInt(str.slice(idx, idx + 2)) <= 26
+    ) {
+      res += helper(idx + 2);
+    }
+
+    return res;
+  };
+
+  return helper();
+}
