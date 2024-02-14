@@ -121,6 +121,30 @@ class SinglyLinkedList {
 
     return index;
   }
+
+  middle() {
+    let c1 = this.head;
+    let c2 = this.head;
+
+    while (c1 && c1.next) {
+      c1 = c1.next.next;
+      c2 = c2.next;
+    }
+    return c2.data;
+  }
+
+  reverse() {
+    let cur = this.head;
+    let prev = null;
+
+    while (cur) {
+      let next = cur.next;
+      cur.next = prev;
+      prev = cur;
+      cur = next;
+    }
+    this.head = prev;
+  }
 }
 
 // doubly linked list
@@ -199,3 +223,14 @@ class DoublyLinkedList {
     return data;
   }
 }
+
+const l1 = new SinglyLinkedList();
+l1.push(1);
+l1.push(2);
+l1.push(3);
+l1.push(4);
+
+l1.reverse();
+
+l1.display();
+// console.log(l1.middle());
