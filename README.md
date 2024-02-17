@@ -128,3 +128,9 @@
 ## backtracking
 * string permutation
 * Maximum Length of a Concatenated String with Unique Characters
+
+## Dynamic Programming
+
+## Two Pointer
+* pair of elements in sorted array whose sum is equal to given number
+* pair difference in sorted array
