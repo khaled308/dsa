@@ -108,7 +108,9 @@
 * find pair of elements in array whose sum is equal to given number
 * Find first non-repeating character of given String
 * Remove duplicates from Array
-
+* [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)
+* check if arr[i] + arr[j] = arr[k] + arr[l]
+* [count number of sub arrays sum equals k](https://leetcode.com/problems/subarray-sum-equals-k/description/)
 
 
 ## Linked List
