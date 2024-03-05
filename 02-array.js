@@ -266,15 +266,45 @@ function maximumLength(arr) {
   return res;
 }
 
-// prefix sum array
-function prefixSum(nums) {
-  const res = [];
+// equilibrium index
+function equilibriumIndex(nums) {
+  if (nums.length < 3) return -1;
 
-  for (let i = 0; i < nums.length; i++) {
-    const num = i != 0 ? nums[i] + res[i - 1] : nums[i];
-    res.push(num);
+  let total = nums.reduce((a, b) => a + b, 0);
+  let sumL = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    const sumR = total - sumL - nums[i];
+    if (sumL === sumR) return i;
+
+    sumL += nums[i];
   }
-  return res;
+
+  return -1;
 }
 
-console.log(prefixSum([3, 2, 1, 5, 4]));
+// find a sub array of size k with the least average
+function subArrayWithLeastAvg(nums, k) {
+  let sum = 0;
+  let end = 0;
+  let avg = Infinity;
+
+  for (let i = 0; i < k; i++) {
+    sum += nums[i];
+  }
+
+  for (let i = k; i < nums.length; i++) {
+    if (sum / k < avg) {
+      avg = sum / k;
+      end = i - 1;
+    }
+    sum -= nums[i - k];
+    sum += nums[i];
+  }
+
+  if (sum / k < avg) end = nums.length - 1;
+
+  return nums.slice(end + 1 - k, end + 1);
+}
+
+console.log(subArrayWithLeastAvg([2, 6, 8, 3, 1, 4], 3));

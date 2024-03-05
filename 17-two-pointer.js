@@ -14,6 +14,23 @@ function getPair(arr, target) {
   return null;
 }
 
-console.log(getPair([1, 2, 3, 4, 5, 6, 7, 8, 9], 10));
-console.log(getPair([1, 2, 3, 4, 5, 6, 7, 8, 9], 14));
-console.log(getPair([1, 2, 3, 4, 5, 6, 7, 8, 9], 16));
+// count number of connective numbers that equal to num
+function count(num) {
+  let count = 0;
+  let sum = 0;
+  let left = 1;
+  let right = 1;
+
+  while (right <= num / 2) {
+    sum += right;
+
+    if (sum === num) count++;
+
+    if (sum > num) {
+      sum -= left;
+      left++;
+    } else right++;
+  }
+
+  return count;
+}

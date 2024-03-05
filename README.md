@@ -26,7 +26,8 @@
 * stock buy sell to maximize profit
 * max consecutive ones in binary array
 * maximum length even odd sub array
-* prefix sum array
+* equilibrium index
+* find a sub array of size k with the least average
 
 ## Math
 * sum of digits of a number
@@ -135,4 +136,4 @@
 
 ## Two Pointer
 * pair of elements in sorted array whose sum is equal to given number
-* pair difference in sorted array
+* count number of connective numbers that equal to num
