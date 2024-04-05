@@ -103,6 +103,7 @@
 * get all subsequences of a string
 * generate parenthesis
 * [decode ways](https://leetcode.com/problems/decode-ways/description/)
+* given a rope of length n, find the maximum number of pieces you can make such that the length of each piece is in set {a, b, c}
 
 
 ## hashing
@@ -137,3 +138,4 @@
 ## Two Pointer
 * pair of elements in sorted array whose sum is equal to given number
 * count number of connective numbers that equal to num
+* sort array of 0s & 1s

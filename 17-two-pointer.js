@@ -34,3 +34,21 @@ function count(num) {
 
   return count;
 }
+
+// sort array of 0s & 1s
+function sort(nums) {
+  let s = 0,
+    e = nums.length - 1;
+
+  while (s < e) {
+    if (nums[s] == 0) s++;
+    else {
+      [nums[s], nums[e]] = [nums[e], nums[s]];
+      e--;
+    }
+  }
+
+  return nums;
+}
+
+console.log(sort([0, 1, 1, 0, 1, 1, 1, 0]));

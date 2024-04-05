@@ -269,3 +269,18 @@ function decodeWays(str) {
 
   return helper();
 }
+
+// given a rope of length n, find the maximum number of pieces you can make such that the length of each piece is in set {a, b, c}
+function maxPieces(n, a, b, c) {
+  if (n <= 0) return n;
+
+  const max = Math.max(
+    maxPieces(n - a, a, b, c),
+    maxPieces(n - b, a, b, c),
+    maxPieces(n - c, a, b, c)
+  );
+
+  if (max < 0) return -1;
+
+  return max + 1;
+}
