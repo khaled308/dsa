@@ -307,4 +307,33 @@ function subArrayWithLeastAvg(nums, k) {
   return nums.slice(end + 1 - k, end + 1);
 }
 
-console.log(subArrayWithLeastAvg([2, 6, 8, 3, 1, 4], 3));
+// 3 sum
+const threeSum = (nums) => {
+  nums.sort((a, b) => a - b);
+  let res = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    if (i > 0 && nums[i] === nums[i - 1]) continue;
+
+    let start = i + 1;
+    let end = nums.length - 1;
+
+    while (start < end) {
+      const sum = nums[i] + nums[start] + nums[end];
+      if (sum === 0) {
+        let n1 = nums[start];
+        let n2 = nums[end];
+
+        res.push([nums[i], n1, n2]);
+
+        while (start < end && n1 == nums[start]) start++;
+
+        while (start < end && n2 == nums[end]) end--;
+      } else if (sum > 0) end--;
+      else start++;
+    }
+  }
+  return res;
+};
+
+console.log(threeSum([-1, 0, 1, 2, -1, -4]));

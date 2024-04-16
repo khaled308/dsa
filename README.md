@@ -28,6 +28,7 @@
 * maximum length even odd sub array
 * equilibrium index
 * find a sub array of size k with the least average
+* 3 sum
 
 ## Math
 * sum of digits of a number
