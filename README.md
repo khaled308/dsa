@@ -126,6 +126,7 @@
 * in order traversal
 * pre order traversal
 * post order traversal
+* level order traversal
 * search node in BST
 * height of BST
 * balanced BST

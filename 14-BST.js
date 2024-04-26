@@ -39,6 +39,21 @@ function postOrder(root) {
   }
 }
 
+function levelOrder(root) {
+  const queue = [];
+
+  if (root.data) queue.push(root);
+
+  while (queue.length) {
+    const temp = queue.shift();
+    console.log(temp.data);
+
+    if (temp.left) queue.push(temp.left);
+
+    if (temp.right) queue.push(temp.right);
+  }
+}
+
 function search(root, val) {
   while (root) {
     if (root.data == val) return true;
