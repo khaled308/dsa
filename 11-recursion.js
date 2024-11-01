@@ -284,3 +284,39 @@ function maxPieces(n, a, b, c) {
 
   return max + 1;
 }
+
+// tower of hanoi
+function moveDisk(n) {
+  function move(n, from, to, aux) {
+    if (n == 1) {
+      console.log(`move disk 1 from rod ${from} to rod ${to}`);
+      return;
+    }
+    move(n - 1, from, aux, to);
+    console.log(`move disk ${n} from rod ${from} to rod ${to}`);
+    move(n - 1, aux, to, from);
+  }
+
+  return move(n, 1, 3, 2);
+}
+
+// K-th Symbol in Grammar
+function kthGrammar(n, k) {
+  if (n == 1) return 0;
+
+  const parent = kthGrammar(n - 1, Math.ceil(k / 2));
+
+  if (k % 2 == 0) {
+    return parent === 0 ? 1 : 0;
+  } else return parent;
+}
+
+// Find the Winner of the Circular Game
+function findTheWinner(n, k) {
+  function helper(n, k) {
+    if (n == 1) return 0;
+
+    return (helper(n - 1, k) + k) % n;
+  }
+  return helper(n, k) + 1;
+}

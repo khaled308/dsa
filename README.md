@@ -105,6 +105,10 @@
 * generate parenthesis
 * [decode ways](https://leetcode.com/problems/decode-ways/description/)
 * given a rope of length n, find the maximum number of pieces you can make such that the length of each piece is in set {a, b, c}
+* maxPieces
+* tower of hanoi
+* [K-th Symbol in Grammar](https://leetcode.com/problems/k-th-symbol-in-grammar/description/)
+* [Find the Winner of the Circular Game](https://leetcode.com/problems/find-the-winner-of-the-circular-game/description/)
 
 
 ## hashing
